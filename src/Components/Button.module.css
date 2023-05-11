@@ -1,0 +1,77 @@
+.caffe_button {
+    all: unset;
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.caffe_button svg {
+    color: black;
+    width: 25px;
+    height: 30px;
+}
+
+.caffe_detail, .overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+}
+
+.caffe_detail {
+    border-radius: 25px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */;
+    z-index: 1;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+    z-index: 1;
+}
+
+.detail_box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 25px;
+    max-width: 600px;
+    min-width: 300px;
+    z-index: 2;
+}
+
+.detail_summary {
+    white-space: pre-line;
+}
+
+.caffe_detail::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.close__detail {
+    all: unset;
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+}
+
+.close__detail svg {
+    width: 15px;
+    height: 20px;
+}
+
+.hashtag {
+    color: lightblue;
+}

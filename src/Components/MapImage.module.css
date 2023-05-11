@@ -1,0 +1,12 @@
+.map {
+    display: block;
+    position: relative;
+    max-width: 500px;
+    padding: 1em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.map_image {
+    width: 100%;
+}
