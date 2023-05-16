@@ -1,4 +1,4 @@
-import styles from "./App.module.css";
+
 import MapImage from "./Components/MapImage";
 
 function App() {
