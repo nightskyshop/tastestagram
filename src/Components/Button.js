@@ -29,8 +29,8 @@ function Button({caffe}) {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
         style={{
-          top: caffe.position[0],
-          left: caffe.position[1]
+          top: caffe.position[0] + "%",
+          left: caffe.position[1] + "%"
         }}
       >
         <FontAwesomeIcon icon={faLocationDot} />
