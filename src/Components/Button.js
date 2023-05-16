@@ -4,11 +4,21 @@ import { useState } from "react";
 import styles from "./Button.module.css";
 
 function Button({caffe}) {
-  console.log(caffe)
-  const [visible, setVisible] = useState(false);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [hoverVisible, setHoverVisible] = useState(false);
+
+  console.log(hoverVisible);
 
   const popupToggle = () => {
-    setVisible(!visible);
+    setPopupVisible(!popupVisible);
+  };
+
+  const onMouseEnter = () => {
+    setHoverVisible(true)
+  };
+
+  const onMouseLeave = () => {
+    setHoverVisible(false);
   };
 
   return (
@@ -16,6 +26,8 @@ function Button({caffe}) {
       <button
         className={styles.caffe_button}
         onClick={popupToggle}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         style={{
           top: caffe.position[0],
           left: caffe.position[1]
@@ -25,7 +37,21 @@ function Button({caffe}) {
       </button>
 
       {
-        visible && (
+        hoverVisible && (
+          <div
+            className={styles.caffe_overview}
+            style={{
+              top: caffe.position[0] + 20,
+              left: caffe.position[1] + 20
+            }}
+          >
+            <h1 className={styles.overview_title}>{caffe.title}</h1>
+          </div>
+        )
+      }
+
+      {
+        popupVisible && (
           <div
             className={styles.caffe_detail}
           >
