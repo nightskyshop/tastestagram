@@ -7,8 +7,6 @@ function Button({caffe}) {
   const [popupVisible, setPopupVisible] = useState(false);
   const [hoverVisible, setHoverVisible] = useState(false);
 
-  console.log(hoverVisible);
-
   const popupToggle = () => {
     setPopupVisible(!popupVisible);
   };
@@ -41,8 +39,8 @@ function Button({caffe}) {
           <div
             className={styles.caffe_overview}
             style={{
-              top: caffe.position[0] + 20,
-              left: caffe.position[1] + 20
+              top: caffe.position[0] + 5 + "%",
+              left: caffe.position[1] + 2 + "%"
             }}
           >
             <h1 className={styles.overview_title}>{caffe.title}</h1>

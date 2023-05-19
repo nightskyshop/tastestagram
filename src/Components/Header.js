@@ -10,7 +10,7 @@ function Header() {
       </div>
       <ul className={styles.navbar__menu}>
         <li><a href="/">지도로 보기</a></li>
-        <li><a href="/">분류로 보기</a></li>
+        <li><a href="/category">분류로 보기</a></li>
       </ul>
     </header>
   )
